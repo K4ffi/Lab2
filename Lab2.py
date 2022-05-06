@@ -1,6 +1,7 @@
 def main():
     display_main_menu()
-    x = get_user_input()
+    z = get_user_input()
+    x = convert_to_float(z)
     calc_average(x)
     find_min_max(x)
     y = sort_temperature(x)
@@ -13,6 +14,9 @@ def display_main_menu():
 
 def get_user_input():
     x = input()
+    return x
+
+def convert_to_float(x):
     y = x.split(",")
     z = [float(i) for i in y]
     return z
